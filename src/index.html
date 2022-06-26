@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pathfinding Algorithms</title>
+
+    <script src="js/grid.js"></script>
+    <script src="index.js"></script>
+    <script src="js/dijkstra.js"></script>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body onload="onLoad()">
+
+<button onclick="run()">Start</button>
+
+<label for="select-draw-mode">Algorithm</label>
+<select id="select-draw-mode" onchange="onChangeDrawMode()">
+    <option>Block</option>
+    <option>Start</option>
+    <option>End</option>
+</select>
+
+<label for="select-algorithm">Algorithm</label>
+<select id="select-algorithm">
+    <option>Dijkstra</option>
+    <option>A*</option>
+</select>
+
+<canvas id="canvas"></canvas>
+</body>
+</html>
