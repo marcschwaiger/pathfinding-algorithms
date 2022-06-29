@@ -4,28 +4,36 @@
     <meta charset="UTF-8">
     <title>Pathfinding Algorithms</title>
 
+    <script src="js/utils.js"></script>
     <script src="js/grid.js"></script>
     <script src="index.js"></script>
     <script src="js/dijkstra.js"></script>
+    <script src="js/astar.js"></script>
     <link rel="stylesheet" href="index.css"/>
 </head>
 <body onload="onLoad()">
 
-<button onclick="run()">Start</button>
+<noscript>JavaScript has to be enabled to run this app</noscript>
 
-<label for="select-draw-mode">Algorithm</label>
-<select id="select-draw-mode" onchange="onChangeDrawMode()">
-    <option>Block</option>
-    <option>Start</option>
-    <option>End</option>
-</select>
+<div id="controls">
+    <button onclick="run(true)">Start</button>
+    <button onclick="reset()">Reset</button>
+    <button onclick="clearAll()">Clear</button>
 
-<label for="select-algorithm">Algorithm</label>
-<select id="select-algorithm">
-    <option>Dijkstra</option>
-    <option>A*</option>
-</select>
+    <label for="select-draw-mode">Draw Mode</label>
+    <select id="select-draw-mode" onchange="onChangeDrawMode()">
+        <option>Block</option>
+        <option>Start</option>
+        <option>End</option>
+        <option>Empty</option>
+    </select>
 
+    <label for="select-algorithm">Algorithm</label>
+    <select id="select-algorithm" onchange="onChangeAlgorithm()">
+        <option>Dijkstra</option>
+        <option>A*</option>
+    </select>
+</div>
 <canvas id="canvas"></canvas>
 </body>
 </html>
