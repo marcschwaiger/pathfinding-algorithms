@@ -9,6 +9,7 @@
     <script src="index.js"></script>
     <script src="js/dijkstra.js"></script>
     <script src="js/astar.js"></script>
+    <script src="js/maze.js"></script>
     <link rel="stylesheet" href="index.css"/>
 </head>
 <body onload="onLoad()">
@@ -19,6 +20,7 @@
     <button onclick="run(true)">Start</button>
     <button onclick="reset()">Reset</button>
     <button onclick="clearAll()">Clear</button>
+    <button onclick="generateMaze()">Generate Maze</button>
 
     <label for="select-draw-mode">Draw Mode</label>
     <select id="select-draw-mode" onchange="onChangeDrawMode()">
@@ -30,8 +32,8 @@
 
     <label for="select-algorithm">Algorithm</label>
     <select id="select-algorithm" onchange="onChangeAlgorithm()">
-        <option>Dijkstra</option>
         <option>A*</option>
+        <option>Dijkstra</option>
     </select>
 </div>
 <canvas id="canvas"></canvas>
