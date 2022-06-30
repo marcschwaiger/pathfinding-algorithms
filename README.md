@@ -9,3 +9,6 @@ A small project to visualize some pathfinding algorithms.
 - Install dependencies via `npm install`
 - Run `npm run build` script to transpile the TypeScript
 - Locate the `dist` folder and open index.html in the Browser of your choice
+
+## Live Version
+A live version of this app is available on [https://marcschwaiger.github.io/pathfinding-algorithms/](https://marcschwaiger.github.io/pathfinding-algorithms/)
