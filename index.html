@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pathfinding Algorithms</title>
+
+    <script src="js/utils.js"></script>
+    <script src="js/grid.js"></script>
+    <script src="index.js"></script>
+    <script src="js/dijkstra.js"></script>
+    <script src="js/astar.js"></script>
+    <script src="js/maze.js"></script>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body onload="onLoad()">
+
+<noscript>JavaScript has to be enabled to run this app</noscript>
+
+<div id="controls">
+    <button onclick="run(true)">Start</button>
+    <button onclick="reset()">Reset</button>
+    <button onclick="clearAll()">Clear</button>
+    <button onclick="generateMaze()">Generate Maze</button>
+
+    <label for="select-draw-mode">Draw Mode</label>
+    <select id="select-draw-mode" onchange="onChangeDrawMode()">
+        <option>Block</option>
+        <option>Start</option>
+        <option>End</option>
+        <option>Empty</option>
+    </select>
+
+    <label for="select-algorithm">Algorithm</label>
+    <select id="select-algorithm" onchange="onChangeAlgorithm()">
+        <option>A*</option>
+        <option>Dijkstra</option>
+    </select>
+</div>
+<canvas id="canvas"></canvas>
+</body>
+</html>
